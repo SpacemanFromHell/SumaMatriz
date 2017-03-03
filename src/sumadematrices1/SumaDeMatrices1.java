@@ -57,4 +57,3 @@ public class SumaDeMatrices1 {
     }
     
 }
-//Don’t use git pull, use git fetch, then git merge, then git commit and then git push.
