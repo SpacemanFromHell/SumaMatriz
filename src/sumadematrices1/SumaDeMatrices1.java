@@ -32,8 +32,9 @@ public class SumaDeMatrices1 {
         Scanner leer1 = new Scanner(System.in);
         int i, j;//contadores
         if(tam2 != tam3){            
-            System.out.println("El tamaño de las matrices son invalidas");      
-        }else
+            System.out.println("El tamaño de las matrices son invalidas"); 
+            
+        }else{
             
             System.out.println("Datos de la Matriz A: ");
             for (i=1; i<=tam1; i++){
@@ -48,7 +49,8 @@ public class SumaDeMatrices1 {
                     System.out.print("Escribir valor " + i + " , " + j + ": ");
                     matrizB[i][j]= leer1.nextInt();
                 }
-            }       
+            }
+        }       
         
     }
     
@@ -74,11 +76,13 @@ public class SumaDeMatrices1 {
     }           
     
     
-    public static void main() {
+    public static void main(String[] args) {
         // TODO code application logic here
         SumaDeMatrices1 sm = new SumaDeMatrices1();
         sm.pideTamaño();       
         sm.pideDatos();
+        sm.sumaMatriz();
     }
     
+
 }
