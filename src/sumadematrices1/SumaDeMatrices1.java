@@ -26,28 +26,32 @@ public class SumaDeMatrices1 {
         System.out.println("Ingrese el tamaño #1 de la matriz B:  ");
         tam3 = leer.nextInt();
         System.out.println("Ingrese el tamaño #2 de la matriz B:  ");
-        tam4 = leer.nextInt();      
+        tam4 = leer.nextInt();    
+        
+        matrizA= new int[tam1][tam2];
+        matrizB= new int[tam3][tam4];
     }
+    
     public void pideDatos(){
         Scanner leer1 = new Scanner(System.in);
-        int i, j;//contadores
+        
         if(tam2 != tam3){            
             System.out.println("El tamaño de las matrices son invalidas"); 
             
         }else{
             
             System.out.println("Datos de la Matriz A: ");
-            for (i=1; i<=tam1; i++){
-                for (j=1; j<=tam2; j++){
-                    System.out.print("Escribir valor " + i + " , " + j + ": ");
-                    matrizA[i][j]= leer1.nextInt();
+            for (i=0; i<tam1; i++){
+                for (j=0; j<tam2; j++){
+                    System.out.print("Escribir valor: ");
+                    matrizA[i][j] = leer1.nextInt();
                 }
             }
             System.out.println("Datos de la Matriz B: ");
-            for (i=1; i<=tam3; i++){
-                for (j=1; j<=tam4; j++){
-                    System.out.print("Escribir valor " + i + " , " + j + ": ");
-                    matrizB[i][j]= leer1.nextInt();
+            for (i=0; i<tam3; i++){
+                for (j=0; j<tam4; j++){
+                    System.out.print("Escribir valor: ");
+                    matrizB[i][j] = leer1.nextInt();
                 }
             }
         }       
@@ -55,12 +59,12 @@ public class SumaDeMatrices1 {
     }
     
     public void sumaMatriz(){
-        
-        for (i=0; i<=2; i++){
-             for (j=0; j<=2; j++){
-                 matrizC [i][j]= matrizA[i][j]+matrizB[i][j];
-                }
+        matrizC= new int [tam3][tam4];
+        for (i=0; i<tam3; i++){
+             for (j=0; j<tam4; j++){
+                 matrizC [i][j] = matrizA[i][j] + matrizB[i][j];
             }
+        }
     }
     
     public void imprimir(){
@@ -68,15 +72,16 @@ public class SumaDeMatrices1 {
         
         System.out.println("Matriz resultante de la suma :");
         for (i=0;i<=2;i++){
-             for (j=0;j<=2;j++) {
-         System.out.print(matrizC[i][j] + " ");
+            for (j=0;j<=2;j++) {
+            System.out.print(matrizC[i][j]);
             }
         
         
-    }           
+        }    
+    }       
     
     
-    public static void main(String[] args) {
+    public static void main(String[] args){
         // TODO code application logic here
         SumaDeMatrices1 sm = new SumaDeMatrices1();
         sm.pideTamaño();       
@@ -84,5 +89,4 @@ public class SumaDeMatrices1 {
         sm.sumaMatriz();
     }
     
-
 }
