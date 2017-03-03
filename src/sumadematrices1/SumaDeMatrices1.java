@@ -16,7 +16,7 @@ public class SumaDeMatrices1 {
      */
     public int tam1, tam2,tam3, tam4;//tamaño de matrices;
     public int i, j;//contadores    
-    public int matrizA[][],matrizB[][],matrizC[][];   
+    public int matrizA[][],matrizB[][],matrizC[][];   //matrices
     public void pideTamaño() {
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese el tamaño #1 de la matriz A:  ");
